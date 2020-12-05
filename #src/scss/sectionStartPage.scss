@@ -1,0 +1,273 @@
+.section {}
+
+.start-page {
+	background: url('../img/jpg/startPage-bg.jpg') center / cover no-repeat;
+}
+
+.start-page__container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 25px 0px 83px 0px;
+	@media (max-width: 1160px) {
+		padding: 25px 0px 40px 0px;
+	}
+}
+
+.start-page__logo {
+	z-index: -10;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	animation: rotate 50s infinite linear;
+	& img {
+		z-index: -10;
+	}
+}
+@keyframes rotate {
+	0% {}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+.start-page__content {
+	width: 100%;
+	padding: 150px 0px 82px 0px;
+	@media (max-width: 1160px) {
+		padding: 70px 0px 30px 0px;
+	}
+	@media (max-width: 767px) {
+		padding: 30px 0px 30px 0px;
+	}
+}
+
+.start-page__flex-container {
+	// position: relative;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0px 10px;
+	margin: 0 auto;
+	@extend %flex;
+	justify-content: space-between;
+
+	@media (max-width: 1160px) {
+		flex-direction: column;
+	}
+}
+
+.start-page__timetable {
+	// position: absolute;
+	// top: 115px;
+	// left: -78px;
+	position: relative;
+	width: 60px;
+	height: 100%;
+	min-height: 60px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 1;
+	overflow: visible;
+	& span {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: -150px;
+		width: 300px;
+		transform: rotate(270deg);
+		@media (max-width: 1160px) {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			min-width: 100px;
+			height: auto;
+			text-align: center;
+			transform: rotate(0deg);
+		}
+	}
+	@media (max-width: 1160px) {
+		width: 100%;
+		margin: 0 auto;
+		height: 100%;
+		min-height: 20px;
+	}
+}
+
+.start-page__items {
+	width: 100%;
+	max-width: 998px;
+}
+
+.start-page__item-text {
+	font-weight: bold;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	margin-top: 0px;
+	@media (max-width: 1160px) {
+		margin-top: 30px;
+	}
+}
+
+.start-page__item-title {
+	font-family: $fontMinor;
+	text-align: center;
+	@include adaptiv-font(96, 26, 96);
+	// font-size: 96px;
+	text-transform: uppercase;
+	&::after {
+		content: '';
+		display: block;
+		border-radius: 50px;
+		width: 61px;
+		height: 5px;
+		background: $colorYellow;
+		margin: 15px auto 0px;
+	}
+}
+
+.start-page__item-buttons {
+	width: 100%;
+	max-width: 480px;
+	margin: 30px auto 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	@media (max-width: 1160px) {
+		margin: 30px auto 30px;
+	}
+
+	@media (max-width: 550px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 20px auto 20px;
+	}
+}
+
+.start-page__item-button {
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	margin: 0px 20px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 1.6;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	padding: 20px;
+	transition: all .5s ease 0s;
+
+	@media (max-width: 550px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 10px 0px;
+	}
+
+	&:focus,
+	&:active {
+		background: $colorYellow;
+	}
+
+	@media (min-width: 1366px) {
+		&:hover {
+			background: $colorYellow;
+		}
+	}
+}
+
+.start-page__icons {
+	@media (max-width: 1160px) {
+		display: flex;
+		margin: 0px 0px;
+	}
+}
+
+.start-page__icon {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+	@media (max-width: 1160px) {
+		margin: 0px 10px 0px 10px;
+	}
+}
+
+.start-page__icon-link {
+	font-size: 20px;
+	color: #fff;
+	transition: all .3 ease 0s;
+
+	&:focus,
+	&:active {
+		font-size: 22px;
+		color: $colorYellow;
+	}
+
+	@media (min-width: 1366px) {
+		&:hover {
+			font-size: 22px;
+			color: $colorYellow;
+		}
+	}
+}
+
+
+.start-page__scroll-button {
+	width: 60px;
+	height: 60px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scroll-button__link {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #fff;
+	transition: all .5s ease 0s;
+
+	&:focus,
+	&:active {
+		background: $colorYellow;
+		transform: scale(1.1);
+	}
+
+	@media (min-width: 1366px) {
+		&:hover {
+			background: $colorYellow;
+			transform: scale(1.1);
+		}
+	}
+
+	& img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+		object-fit: contain;
+	}
+}
