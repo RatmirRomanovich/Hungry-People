@@ -180,10 +180,11 @@ body.ie {
 }
 //====================================================================================================
 ._swiper {
-	overflow: hidden;
+	overflow: visible;
 	//.swiper-wrapper
 	.swiper-wrapper {
 		width: 100%;
+		max-width: 1500px;
 		height: 100%;
 		box-sizing: content-box;
 		display: flex;
@@ -215,6 +216,7 @@ body.ie {
 .swiper-button-lock {
 	display: none !important;
 }
+
 //====================================================================================================
 .slick-slider {
 	position: relative;

@@ -31,11 +31,38 @@ $md3: 767.98;
 $md4: 479.98;
 
 $colorYellow: #E8C300;
+$colorError:  rgb(226, 148, 148);
+$colorCaption: #fff;
+$colorFormtext: rgba(51, 51, 51, 0.5);
+$colorFormBG: #E5E5E5; 
+$colorLinkContactHover: #000; 
+
+%fontLink {
+	font-size: calc(8px + 3 * ((100vw - 320px)/ 1600));
+	line-height: 1.2;
+	font-weight: 700;
+	color: rgba(51,51,51,.5);
+}
 
 %flex {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+}
+
+%flexWrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+%form {
+	font-size: 14px;
+	line-height: 1.35;
+	text-indent: 20px;
+	color: $colorFormtext;
+	border-radius: 5px;
 }
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
@@ -102,6 +129,13 @@ body {
 // @import "popup";
 @import "header";
 @import "sectionStartPage";
+@import "descriptionAndPicture";
+@import "sectionAboutUs";
+@import "sectionOurTeam";
+@import "sectionBookAtable";
+@import "sectionSpecialties";
+@import "sectionMenu";
+@import "sectionContact";
 @import "footer";
 // @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -123,18 +157,25 @@ body {
 	}
 }
 
-.title {
-
-	&::after {
-		content: '';
+//=====================================================================================================================
+.tab__item {
+	display: none;
+	&.active {
 		display: block;
-		border-radius: 50px;
-		width: 61px;
-		height: 5px;
-		background: $colorYellow;
-		margin: 15px auto 0px;
 	}
 }
+//=====================================================================================================================
+._tabs {
+}
+._tabs-item {
+}
+._tabs-block {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+//=====================================================================================================================
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

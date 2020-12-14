@@ -1,0 +1,237 @@
+.section {}
+
+.book-a-table {
+	background-color: #fff;
+	padding: 3% 13%;
+}
+
+.book-a-table__container {}
+
+._container {}
+
+.book-a-table__row {}
+
+.row {}
+
+.book-a-table__desc {}
+
+.desc {}
+
+.book-a-table__title {}
+
+.title {}
+
+.title--color-black {}
+
+.book-a-table__foto {}
+
+.foto__box {}
+
+.foto__main {}
+
+.foto__decor {}
+
+.foto__decor--position-right {}
+
+.book-a-table__info-time {}
+
+.info-time {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding-top: 10px;
+	@include adaptiv-font(12,9,12);
+	line-height: 1.2;
+	color: $colorFormtext;
+}
+
+.info-time__days {
+	& span {
+		font-weight: 700;
+	}
+}
+
+.info-time__phone {}
+
+.info-time__phone-link {
+	@extend %fontLink;
+	color: $colorFormtext;
+}
+
+
+
+
+
+
+/* ------------------ */
+
+.form {
+	max-width: 550px;
+	margin: 0px auto;
+	color: #fff;
+	padding: 30px 0;
+}
+
+.form * {
+	outline: none;
+}
+
+.form__body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: -5px -5px;
+}
+
+.form__body._sending::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form__item {
+	flex: 0 0 50%;
+	padding: 5px 5px;
+	@media (max-width: 550px) {
+		flex: 0 0 100%;
+	}
+}
+
+.form__input {
+	height: 60px;
+	padding: 0px 0px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 18px;
+	transition: all 0.5s ease 0s;
+	background: $colorFormBG;
+
+	color: $colorFormtext;
+	font-size: 14px;
+	line-height: 1.35;
+	text-indent: 20px;
+}
+
+// textarea.form__input {
+// 	min-height: 120px;
+// 	resize: vertical;
+//    padding: 20px; 
+// }
+
+.form__input:focus {
+	box-shadow: 0 0 15px $colorYellow;
+}
+
+.form__input._error {
+	box-shadow: 0 0 10px $colorError;
+}
+
+.form__button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60px;
+	background-color: $colorYellow;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 0 5px 0 #957d00;
+	transition: background-color 0.5s ease 0s;
+	position: relative;
+	top: 0;
+	margin: 5px 5px 0px 5px;
+}
+
+.form__button:hover {
+	background-color: #f1d235;
+}
+
+.form__button:active {
+	top: 3px;
+	box-shadow: 0 2px 0 #957d00;
+}
+
+// select ====================== >
+
+.select {
+	position: relative;
+}
+
+.select__item {
+	position: relative;
+}
+
+.select__title {
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	background: $colorFormBG;
+}
+
+.select__value {
+	display: flex;
+	height: 60px;
+	padding: 0px 20px 0px 0px;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	color: $colorFormtext;
+	font-size: 14px;
+	line-height: 1.35;
+	text-indent: 20px;
+}
+
+.select__value span {
+	height: 1.35em;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.select__value::before {
+	content: "";
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	width: 16px;
+	height: 12px;
+	background: url("../img/svg/selected.svg") center / 100% no-repeat;
+}
+
+.select__options {
+	display: none;
+	position: absolute;
+	top: 49px;
+	border-radius: 5px;
+	min-width: 100%;
+	left: 0;
+	background-color: $colorFormBG;
+	padding: 0px 0px 5px 0px;
+	color: $colorFormtext;
+	font-size: 14px;
+	line-height: 1.35;
+	text-indent: 20px;
+}
+
+.select__option {
+	cursor: pointer;
+	padding: 10px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.select._active {
+	z-index: 5;
+}
+
+.select._active .select__value::before {
+	transform: rotate(-180deg);
+}
+
+.select._active.select__options {
+	display: block;
+}

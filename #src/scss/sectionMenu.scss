@@ -1,0 +1,107 @@
+.section {}
+
+.menu {
+	padding: 3% 0%;
+}
+
+.menu__container {}
+
+._container {}
+
+.menu__desc {}
+
+.desc {}
+
+.title {}
+
+.title--color-black {}
+
+.menu__text {
+	width: 100%;
+	max-width: 565px;
+}
+
+.text--color-white {}
+
+.text__top {}
+
+.menu-restaurant {
+	color: #333;
+}
+
+.menu-restaurant__nav-items {
+	display: flex;
+	justify-content: center;
+}
+
+.menu-restaurant__nav-item {
+	padding: 16px 0px;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid rgba(51, 51, 51, 0.2);
+	cursor: pointer;
+
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 1.5;
+
+	transition: all 0.8s ease 0s;
+
+	&._active {
+		background: $colorYellow;
+	}
+
+	&:last-child {
+		border-right: none;
+	}
+
+}
+
+.menu-restaurant__list-items {
+	padding-top:  calc(20px + (51 - 20) * ((100vw - 320px) / (1300 - 320)));
+}
+
+.menu-restaurant__list-item {
+	// margin: 0px -10px;
+}
+
+.menu-restaurant__list-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+} 
+
+
+.menu-restaurant__products-box {
+	flex: 0 0 30%;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom:  calc(10px + (20 - 10) * ((100vw - 320px) / (1300 - 320)));
+	// margin: 0px 10px;
+}
+
+.menu-restaurant__products-description {}
+
+.menu-restaurant__products-name {
+	font-family: $fontMinor;
+	font-size: 18px;
+	line-height: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	max-width: 290px;
+}
+
+.menu-restaurant__products-composition {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.menu-restaurant__products-price {
+	font-family: $fontMinor;
+	font-size: 18px;
+	line-height: 1;
+}
