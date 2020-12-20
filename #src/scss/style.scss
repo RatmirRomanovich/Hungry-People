@@ -102,19 +102,63 @@ body {
 	width: 100%;
 	max-width: $md1 + px;
 	margin: 0 auto;
-	padding: 0px 10px;
-	/* 	@media (max-width: $md1+px) {
-		max-width: 970px;
-	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
-	} */
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top:  calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
+	padding-bottom: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
 }
 
+._hidden--left {
+	transform: translate(-50%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._hidden--right {
+	transform: translate(50%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease 0s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._hidden__menu {
+	transform: translate( 0px, -40%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+._hidden__maps {
+	transform: translate( 100%, 0px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease 0s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
@@ -123,10 +167,7 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
-//@import "datepicker";
-//@import "lightgallery";
-//@import "pagging";
-// @import "popup";
+@import "lightgallery";
 @import "header";
 @import "sectionStartPage";
 @import "descriptionAndPicture";
@@ -135,7 +176,10 @@ body {
 @import "sectionBookAtable";
 @import "sectionSpecialties";
 @import "sectionMenu";
+@import "privateEvents";
+@import "gallery";
 @import "sectionContact";
+@import "maps";
 @import "footer";
 // @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

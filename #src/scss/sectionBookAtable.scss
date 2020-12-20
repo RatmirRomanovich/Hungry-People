@@ -1,39 +1,39 @@
-.section {}
+// .section {}
 
 .book-a-table {
 	background-color: #fff;
-	padding: 3% 13%;
+	padding: 0px 13%;
 }
 
-.book-a-table__container {}
+// .book-a-table__container {}
 
-._container {}
+// ._container {}
 
-.book-a-table__row {}
+// .book-a-table__row {} 
 
-.row {}
+// .row {}
 
-.book-a-table__desc {}
+// .book-a-table__desc {}
 
-.desc {}
+// .desc {}
 
-.book-a-table__title {}
+// .book-a-table__title {}
 
-.title {}
+// .title {}
 
-.title--color-black {}
+// .title--color-black {}
 
-.book-a-table__foto {}
+// .book-a-table__foto {}
 
-.foto__box {}
+// .foto__box {}
 
-.foto__main {}
+// .foto__main {}
 
-.foto__decor {}
+// .foto__decor {}
 
-.foto__decor--position-right {}
+// .foto__decor--position-right {}
 
-.book-a-table__info-time {}
+// .book-a-table__info-time {}
 
 .info-time {
 	display: flex;
@@ -41,7 +41,7 @@
 	align-items: center;
 	justify-content: center;
 	padding-top: 10px;
-	@include adaptiv-font(12,9,12);
+	@include adaptiv-font(12, 9, 12);
 	line-height: 1.2;
 	color: $colorFormtext;
 }
@@ -93,6 +93,7 @@
 .form__item {
 	flex: 0 0 50%;
 	padding: 5px 5px;
+
 	@media (max-width: 550px) {
 		flex: 0 0 100%;
 	}

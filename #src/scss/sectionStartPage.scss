@@ -1,4 +1,4 @@
-.section {}
+// .section {}
 
 .start-page {
 	background: url('../img/jpg/startPage-bg.jpg') center / cover no-repeat;
@@ -8,6 +8,7 @@
 	width: 100%;
 	margin: 0 auto;
 	padding: 25px 0px 83px 0px;
+
 	@media (max-width: 1160px) {
 		padding: 25px 0px 40px 0px;
 	}
@@ -19,10 +20,12 @@
 	height: 150px;
 	margin: 0 auto;
 	animation: rotate 50s infinite linear;
+
 	& img {
 		z-index: -10;
 	}
 }
+
 @keyframes rotate {
 	0% {}
 
@@ -35,9 +38,11 @@
 .start-page__content {
 	width: 100%;
 	padding: 150px 0px 82px 0px;
+
 	@media (max-width: 1160px) {
 		padding: 70px 0px 30px 0px;
 	}
+
 	@media (max-width: 767px) {
 		padding: 30px 0px 30px 0px;
 	}
@@ -69,6 +74,7 @@
 	font-size: 12px;
 	line-height: 1;
 	overflow: visible;
+
 	& span {
 		display: inline-block;
 		position: absolute;
@@ -76,6 +82,7 @@
 		left: -150px;
 		width: 300px;
 		transform: rotate(270deg);
+
 		@media (max-width: 1160px) {
 			top: 0;
 			right: 0;
@@ -88,6 +95,7 @@
 			transform: rotate(0deg);
 		}
 	}
+
 	@media (max-width: 1160px) {
 		width: 100%;
 		margin: 0 auto;
@@ -110,6 +118,7 @@
 	text-transform: uppercase;
 	margin-bottom: 30px;
 	margin-top: 0px;
+
 	@media (max-width: 1160px) {
 		margin-top: 30px;
 	}
@@ -121,6 +130,7 @@
 	@include adaptiv-font(96, 26, 96);
 	// font-size: 96px;
 	text-transform: uppercase;
+
 	&::after {
 		content: '';
 		display: block;
@@ -139,6 +149,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+
 	@media (max-width: 1160px) {
 		margin: 30px auto 30px;
 	}
@@ -204,6 +215,7 @@
 	&:last-child {
 		margin-bottom: 0px;
 	}
+
 	@media (max-width: 1160px) {
 		margin: 0px 10px 0px 10px;
 	}

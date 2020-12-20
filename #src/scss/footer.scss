@@ -1,5 +1,21 @@
-footer{}
-//====================================================================================================
+.footer {
+	background: rgba(0, 0, 0, 0.9);
+}
 
-//====================================================================================================
+.footer__content {
+	min-height: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
 
+.footer__desc {
+	font-size: 12px;
+	line-height: 1;
+	color: rgba(255, 255, 255, 0.5);
+
+	span {
+		font-weight: 900;
+	}
+}

@@ -1,29 +1,29 @@
-.section {}
+// .section {}
 
 .menu {
-	padding: 3% 0%;
+	min-width: 600px;
 }
 
-.menu__container {}
+// .menu__container {}
 
-._container {}
+// ._container {}
 
-.menu__desc {}
+// .menu__desc {}
 
-.desc {}
+// .desc {}
 
-.title {}
+// .title {}
 
-.title--color-black {}
+// .title--color-black {}
 
 .menu__text {
 	width: 100%;
 	max-width: 565px;
 }
 
-.text--color-white {}
+// .text--color-white {}
 
-.text__top {}
+// .text__top {}
 
 .menu-restaurant {
 	color: #333;
@@ -32,11 +32,13 @@
 .menu-restaurant__nav-items {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .menu-restaurant__nav-item {
 	padding: 16px 0px;
-	width: 120px;
+	flex: 0 1 120px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -60,7 +62,7 @@
 }
 
 .menu-restaurant__list-items {
-	padding-top:  calc(20px + (51 - 20) * ((100vw - 320px) / (1300 - 320)));
+	padding-top: calc(20px + (51 - 20) * ((100vw - 320px) / (1300 - 320)));
 }
 
 .menu-restaurant__list-item {
@@ -72,31 +74,37 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-} 
+
+	@media (max-width: 1000px) {
+		justify-content: space-around;
+	}
+}
 
 
 .menu-restaurant__products-box {
 	flex: 0 0 30%;
+	min-width: 300px;
 	display: flex;
-	justify-content: space-between;
-	padding-bottom:  calc(10px + (20 - 10) * ((100vw - 320px) / (1300 - 320)));
-	// margin: 0px 10px;
+	justify-content: center;
+	padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1300 - 320)));
+	margin: 0px -5px;
 }
 
-.menu-restaurant__products-description {}
+.menu-restaurant__products-description {
+	margin: 0px 5px;
+}
 
 .menu-restaurant__products-name {
 	font-family: $fontMinor;
-	font-size: 18px;
-	line-height: 1;
-	white-space: nowrap;
+	@include adaptiv-font(18, 12, 18);
+	line-height: 1.1;
 	overflow: hidden;
 	width: 100%;
 	max-width: 290px;
 }
 
 .menu-restaurant__products-composition {
-	font-size: 12px;
+	@include adaptiv-font(12, 10, 12);
 	line-height: 1.5;
 }
 
@@ -104,4 +112,6 @@
 	font-family: $fontMinor;
 	font-size: 18px;
 	line-height: 1;
+	margin: 0px 5px;
+	text-align: center;
 }
