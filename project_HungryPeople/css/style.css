@@ -202,8 +202,8 @@ body._lock {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
-  padding-bottom: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
+  padding-top: calc(25px + 25 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 
 ._hidden--left {
@@ -1645,9 +1645,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .start-page__icon-link {
   font-size: 20px;
   color: #fff;
-  -webkit-transition: all .3 ease 0s;
-  -o-transition: all .3 ease 0s;
-  transition: all .3 ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .start-page__icon-link:focus,
@@ -1787,8 +1787,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   line-height: 1.5;
   text-align: center;
-  padding-top: calc(20px + (25 - 20) * ((100vw - 320px) / (1300 - 320)));
-  padding-bottom: calc(20px + (50 - 20) * ((100vw - 320px) / (1300 - 320)));
+  padding-top: calc(20px + 5 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(20px + 30 * ((100vw - 320px) / 1600));
 }
 
 .text__bottom {
@@ -2076,8 +2076,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .specialties {
   padding-left: 13%;
   padding-right: 13%;
-  padding-top: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
-  padding-bottom: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
+  padding-top: calc(25px + 25 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 
 .swiper-container {
@@ -2172,7 +2172,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .menu-restaurant__list-items {
-  padding-top: calc(20px + (51 - 20) * ((100vw - 320px) / (1300 - 320)));
+  padding-top: calc(20px + 31 * ((100vw - 320px) / 1600));
 }
 
 .menu-restaurant__list-row {
@@ -2200,7 +2200,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1300 - 320)));
+  padding-bottom: calc(10px + 10 * ((100vw - 320px) / 1600));
   margin: 0px -5px;
 }
 
@@ -2532,7 +2532,7 @@ textarea.form-contact__input {
   background-color: #E8C300;
   color: #fff;
   font-size: 12px;
-  text-transform-contact: uppercase;
+  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;

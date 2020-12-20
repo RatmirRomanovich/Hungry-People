@@ -80,8 +80,8 @@
 	@include adaptiv-font(18, 14, 18);
 	line-height: 1.5;
 	text-align: center;
-	padding-top:  calc(20px + (25 - 20) * ((100vw - 320px) / (1300 - 320)));
-	padding-bottom:  calc(20px + (50 - 20) * ((100vw - 320px) / (1300 - 320)));
+	@include adaptiv-value(padding-top, 25,20,25);
+	@include adaptiv-value(padding-bottom, 50,20,50);
 }
 
 .text__bottom {

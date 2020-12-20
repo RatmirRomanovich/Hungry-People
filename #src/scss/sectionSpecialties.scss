@@ -4,8 +4,8 @@
 	background: url('../img/jpg/specialty-bg.jpg') center / cover no-repeat;
 	padding-left: 13%;
 	padding-right: 13%;
-	padding-top:  calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
-	padding-bottom: calc(25px + (50 - 25) * ((100vw - 320px) / (1300 - 320)));
+	@include adaptiv-value(padding-top, 50,25,50);
+	@include adaptiv-value(padding-bottom, 50,25,50);
 	@media (max-width: 500px) {
 		padding-left: 16%;
 		padding-right: 16%;
